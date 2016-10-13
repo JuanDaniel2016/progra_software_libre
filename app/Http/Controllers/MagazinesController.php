@@ -8,8 +8,10 @@ use App\Http\Requests;
 
 class MagazinesController extends Controller
 {
-  public function index($genre)
-  {
+  public function index($genre = null) {
+    if ($genre == null) {
+      return 'Returning magazines index';
+    }
     return 'Returning magazines from '.$genre;
   }
 }

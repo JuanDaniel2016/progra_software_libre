@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('greet', 'DemoController@greet');
-Route::get('movies/{genre}', 'MoviesController@index');
-Route::get('magazines/{genre}', 'MagazinesController@index');
+Route::get('/greet', 'DemoController@greet');
+Route::get('/movies/{genre?}', 'MoviesController@index');
+Route::get('/magazines/{genre?}', 'MagazinesController@index');
+Route::get('/simple', function () {
+  return view('simple');
+});
+Route::get('/other', function () {
+  return view('other');
+});
+Route::get('/json', function () {
+  return response()->json(['name' => 'Abigail', 'state' => 'CA']);
+});

@@ -8,8 +8,10 @@ use App\Http\Requests;
 
 class MoviesController extends Controller
 {
-    public function index($genre)
-    {
-      return 'Returning movies from '.$genre;
+  public function index($genre = null) {
+    if ($genre == null) {
+      return 'Returning movies index';
     }
+    return 'Returning movies from '.$genre;
+  }
 }
