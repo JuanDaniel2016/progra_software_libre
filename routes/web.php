@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('greet', function () {
-    return '<div style="display:block;margin:auto;text-align:center;"><h1>Hello</h1></div>';
-});
+Route::get('greet', 'DemoController@greet');
+Route::get('movies/{genre}', 'MoviesController@index');
+Route::get('magazines/{genre}', 'MagazinesController@index');

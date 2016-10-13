@@ -8,5 +8,7 @@ use App\Http\Requests;
 
 class DemoController extends Controller
 {
-    //
+    function greet() {
+      return '<h1>Hello world!</h1>';
+    }
 }
